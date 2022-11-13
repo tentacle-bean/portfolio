@@ -1,0 +1,428 @@
+/****************
+    VARIABLES
+****************/
+
+:root{
+    --ff-primary: 'Source Sans Pro', sans-serif;
+    --ff-secondary: 'Source Code Pro', monospace;
+    
+    --fw-reg: 300;
+    --fw-bold: 900;
+    
+    --clr-light: #fff;
+    --clr-dark: #303030;
+    --clr-darker: #141414;
+    --clr-accent: #16e0bd;
+    
+    --bs:   0.25em 0.25em 0.75em rgba(0,0,0,.25),
+            0.125em 0.125em 0.25em rgba(0,0,0,.15);
+    
+    --fs-h1: 3rem;
+    --fs-h2: 3.75rem;
+    --fs-h3: 1.5rem;
+    --fs-st-h: 1.6875rem;
+    --fs-body: 1.125rem;
+}
+
+@media (min-width: 900px) {
+    :root {
+        --fs-h1: 4.5rem;
+        --fs-st-h: 2.375rem;
+    }
+}
+
+
+
+/*********************
+    GENERAL STYLES
+*********************/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+    text-align: center;
+}
+
+img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+/******************
+    TYPOGRAPHY
+******************/
+
+h1, h2, h3, .section-subtitle{
+    margin: 0;
+    line-height: 1;
+}
+
+h1{
+    font-size: var(--fs-h1);
+}
+
+h2{
+    font-size: var(--fs-h2);
+}
+
+h3,
+.socials-item{
+    font-size: var(--fs-h3);
+}
+
+.section-title-services,
+.section-subtitle-work,
+.email,
+.socials-a{
+    color: var(--clr-accent);
+}
+
+strong,
+.section-subtitle-work,
+.btn,
+.email{
+    font-weight: var(--fw-bold);
+}
+
+
+
+.section-title-home{
+    font-weight: var(--fw-reg);
+}
+
+strong{
+    display: block;
+}
+
+.section-title-services{
+    position: relative;
+    margin-bottom: 0.5em;
+}
+
+.section-title-services:before{
+    position: absolute;
+    content: "";
+    width: 40%;
+    height: 1px;
+    background-color: white;
+    left: 30%;
+    bottom: -0.5em;
+}
+
+
+
+.section-subtitle{
+    font-size: var(--fs-h3);
+    font-family: var(--ff-secondary);
+}
+
+.section-subtitle-home{
+    font-size: var(--fs-st-h);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.section-subtitle-home,
+.section-subtitle-aboutme{
+    background-color: var(--clr-accent);
+    padding: 0.5em 1.5em;
+}
+
+.section-subtitle-work{
+    font-family: var(--ff-primary);
+    margin: 1em 0 2em;
+}
+
+
+
+.btn,
+.email{
+    text-decoration: none;
+    font-size: var(--fs-body);
+}
+
+.btn{
+    color: var(--clr-dark);
+    background-color: var(--clr-accent);
+    padding: 0.75em 3em;
+    transition: transform 200ms ease-in-out;
+    border: none;
+}
+
+.btn:hover,
+.btn:focus{
+    background-color: var(--clr-light);
+    transform: scale(1.1);
+}
+
+.email,
+.socials-item{
+    padding: 0.5em;
+}
+
+.socials-item{
+    list-style: none;
+}
+
+.email:hover,
+.email:focus,
+.socials-a:hover,
+.socials-a:focus{
+    color: var(--clr-light);
+}
+
+.btn:hover,
+.btn:focus,
+.email:hover,
+.email:focus{
+    cursor: pointer;
+}
+
+
+
+
+
+
+/*************
+    LAYOUT
+*************/
+
+.section-container{
+    margin: 0 auto;
+    display: grid;
+    justify-items: center;
+    padding: 4em 0;
+    grid-gap: 2em 3em;
+    width: 80%;
+    max-width: 500px;
+}
+
+.profile-pic{
+    max-width: 300px;
+}
+
+.profile-pic,
+.profile-pic-full{
+    box-shadow: var(--bs);
+}
+
+.section-links{
+    background-color: var(--clr-darker);
+}
+
+
+
+.section-services,
+.section-work{
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+}
+
+.section-work-container{
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    grid-gap: 0;
+}
+    
+.section-title-work{
+    grid-column: 1 / -1;
+}
+    
+.section-subtitle-work{
+    grid-column: 1 / -1;
+}
+
+.portfolio-item{
+    background: var(--clr-accent);
+    overflow: hidden;
+}
+
+.portfolio-img {
+    transition: 
+        transform 750ms cubic-bezier(.5, 0, .5, 1),
+        opacity 250ms linear;
+}
+
+.portfolio-img:hover,
+.portfolio-item:focus .portfolio-img{
+    transform: scale(1.2);
+    opacity: .5;
+}
+
+
+
+
+.footer{
+    background-color: var(--clr-darker);
+    padding: 3em 2em;
+}
+
+.footer-container,
+.socials{
+    display: flex;
+}
+
+.footer-container{
+    flex-direction: column;
+    align-items: center;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.socials{
+    padding-inline-start: 0;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+
+
+
+
+@media (min-width: 975px){
+    .section-container{
+        padding: 8em 2em;
+        width: unset;
+        max-width: 1200px;
+    }
+    
+
+
+    .section-subtitle-home,
+    .section-subtitle-aboutme{
+        position: relative;
+        background: none;
+        padding: 0;
+    }
+    
+    .section-subtitle-home:before,
+    .section-subtitle-aboutme:before{
+        position: absolute;
+        background-color: var(--clr-accent);
+        content: "";
+        z-index: -1;
+    }
+    
+    .section-subtitle-home:before{
+        width: 210%;
+        height: 80%;
+        top: -20%;
+        right: -5%;
+    }
+    
+    .section-subtitle-aboutme:before{
+        width: 285%;
+        height: 250%;
+        top: -75%;
+        left: -2em;
+        max-width: 98vw;
+    }
+    
+    
+    
+    .section-home-container{
+        grid-template-areas: 
+            "picture ."
+            "picture .";
+        width: max-content;
+        grid-gap: 0 2em;
+    }
+    
+    .profile-pic{
+        grid-area: picture;
+        justify-self: right;
+    }
+    
+    .section-title-home,
+    .section-subtitle-home{
+        text-align: left;
+        justify-self: left;
+    }
+
+
+
+    .section-links-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    
+    
+    .section-services{
+        background-image: url("./img/services-bg.jpg");
+        background-color: var(--clr-dark);
+        background-blend-mode: soft-light;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .section-services-container{
+        max-width: 1200px;
+        grid-template-areas: 
+            "title title title";
+    }
+    
+    .section-title-services{
+        grid-area: title;
+    }
+    
+    
+    
+    .section-aboutme-container{
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas:
+            ". picture"
+            ". picture"
+            ". picture"
+            ". picture";
+        grid-column-gap: 4em;
+        text-align: left;
+    }
+    
+    .section-title-aboutme,
+    .section-subtitle-aboutme{
+        justify-self: left;
+    }
+    
+    .profile-pic-full{
+        grid-area: picture;
+        object-fit: cover;
+    }
+}
+
+
+
+/***************************************
+    INDIVIDUAL PORTFOLIO ITEM STYLES
+***************************************/
+
+.portfolio-item-individual {
+    padding: 0 2em 2em;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.portfolio-item-individual p {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
