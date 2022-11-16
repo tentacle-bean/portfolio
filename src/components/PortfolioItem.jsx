@@ -16,17 +16,30 @@ function PortfolioItem(){
         <>
             <section ref={ref}className="section-home" id="home">
                 <div className="section-container section-home-container">
-                    <h1 className="section-title section-title-home">The title <strong>of my project</strong></h1>
-                    <p className="section-subtitle section-subtitle-home">a short subtitle</p>
+                    <h1 className="section-title section-title-home">{item.title}<strong>{item.titleStrong}</strong></h1>
+                    {item.subtitle && <p className="section-subtitle section-subtitle-home">{item.subtitle}</p>}
                     <img className="profile-pic" alt="project preview image" src={item.previewImage}/>
                 </div>
             </section>
             
             <section className="portfolio-item-individual">
-                <p>Voluptatibus, soluta blanditiis! Incidunt ea unde itaque illo molestiae eligendi sint culpa nobis voluptas sapiente voluptate, magnam ipsum eius earum?</p>
-                <img src={item.previewImage} alt=""/>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe et amet tenetur! Fugit sequi optio corrupti fugiat ducimus consequatur incidunt?</p>
-                <p>Voluptatibus, soluta blanditiis! Incidunt ea unde itaque illo molestiae eligendi sint culpa nobis voluptas sapiente voluptate, magnam ipsum eius earum?</p>
+                <p>{item.p1}</p>
+                <img className="portfolio-img-full" src={item.fullImage} alt="project full image"/>
+                <p>{item.p2}</p>
+                <p>{item.p3}</p>
+
+                <ul className="socials">
+                    <li className="socials-item">
+                        <a className="socials-a-inv" href={item.appLink}>
+                            <i class="fa-solid fa-gamepad"></i>
+                        </a>
+                    </li>
+                    <li className="socials-item">
+                        <a className="socials-a-inv" href={item.repoLink}>
+                            <i className="fa-brands fa-github"></i>
+                        </a>
+                    </li>
+                </ul>
             </section>
         </>
         
