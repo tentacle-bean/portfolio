@@ -31,7 +31,7 @@ function PortfolioItem(){
                 <ul className="socials">
                     <li className="socials-item">
                         <a className="socials-a-inv" href={item.appLink}>
-                            <i class="fa-solid fa-gamepad"></i>
+                            <i className="fa-solid fa-gamepad"></i>
                         </a>
                     </li>
                     <li className="socials-item">
