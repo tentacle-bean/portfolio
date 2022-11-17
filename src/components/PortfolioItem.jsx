@@ -14,7 +14,7 @@ function PortfolioItem(){
 
     return(
         <>
-            <section ref={ref}className="section-home" id="home">
+            <section ref={ref}className="section-home">
                 <div className="section-container section-home-container">
                     <h1 className="section-title section-title-home">{item.title}<strong>{item.titleStrong}</strong></h1>
                     {item.subtitle && <p className="section-subtitle section-subtitle-home">{item.subtitle}</p>}

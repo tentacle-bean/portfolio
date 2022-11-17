@@ -263,6 +263,8 @@ strong{
 }
 
 .portfolio-img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
     transition: 
         transform 750ms cubic-bezier(.5, 0, .5, 1),
         opacity 250ms linear;
@@ -330,10 +332,10 @@ strong{
     }
     
     .section-subtitle-home:before{
-        width: 210%;
+        width: 130%;
+        left: -15%;
         height: 80%;
         top: -20%;
-        right: -5%;
     }
     
     .section-subtitle-aboutme:before{
@@ -433,13 +435,17 @@ strong{
 }
 
 .portfolio-img-full{
-    /* width: auto; */
+    width: auto;
+    max-height: 100vh;
 }
 
 .portfolio-item-individual p {
     max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 2em auto;
+}
+
+.portfolio-item-individual p:first-child{
+    margin-top: 0;
 }
 
 .portfolio-item-individual .socials{
