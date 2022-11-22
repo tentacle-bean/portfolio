@@ -13,18 +13,29 @@
     --clr-dark: #303030;
     --clr-darker: #141414;
     --clr-accent: #16e0bd;
+    --clr-accent: #9F85FF;
     
     --bs:   0.25em 0.25em 0.75em rgba(0,0,0,.25),
             0.125em 0.125em 0.25em rgba(0,0,0,.15);
     
-    --fs-h1: 3rem;
-    --fs-h2: 3.75rem;
+    --fs-h1: 2rem;
+    --fs-h2: 3rem;
     --fs-h3: 1.5rem;
-    --fs-st-h: 1.6875rem;
-    --fs-body: 1.125rem;
+    --fs-st-h: 1.25rem;
+    --fs-body: 1rem;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 350px) {
+    :root {
+        --fs-h1: 3rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-st-h: 1.6875rem;
+        --fs-body: 1.125rem;
+    }
+}
+
+@media (min-width: 800px) {
     :root {
         --fs-h1: 4.5rem;
         --fs-st-h: 2.375rem;
@@ -170,7 +181,8 @@ strong{
 .btn{
     color: var(--clr-dark);
     background-color: var(--clr-accent);
-    padding: 0.75em 3em;
+    padding: 0.75em 0em;
+    width: 11em;
     transition: transform 200ms ease-in-out;
     border: none;
 }
@@ -307,7 +319,7 @@ strong{
 
 
 
-@media (min-width: 975px){
+@media (min-width: 1005px){
     .section-container{
         padding: 8em 2em;
         width: unset;
@@ -436,12 +448,14 @@ strong{
 
 .portfolio-img-full{
     width: auto;
+    max-width: 100%;
     max-height: 100vh;
 }
 
 .portfolio-item-individual p {
     max-width: 600px;
     margin: 2em auto;
+    text-align: left;
 }
 
 .portfolio-item-individual p:first-child{

@@ -5,6 +5,7 @@ import {useRef, useEffect} from 'react'
 
 function Work(){
     const { pathname } = useLocation();
+    console.log(workData.length)
 
     const portfolioItemPreviews = workData.map(dataObj => 
         <Link key={dataObj._id} to={`/work/${dataObj._id}`} className="portfolio-item">
