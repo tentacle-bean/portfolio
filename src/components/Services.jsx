@@ -11,7 +11,7 @@ function Services(){
     return(
         <section ref={ref} className="section-services" id="services">
             <div className="section-container section-services-container">
-                <h2 className="section-title section-title-services">What I do</h2>
+                <h2 className="section-title section-title-services">Technologies I use</h2>
                 
                 <div className="service">
                     <h3 className="service-name">Design + Development</h3>

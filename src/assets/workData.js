@@ -8,10 +8,10 @@ import colorPreview from '../assets/img/color-preview.png'
 import colorFull from '../assets/img/color-full.png'
 import journalPreview from '../assets/img/journal-preview.png'
 import journalFull from '../assets/img/journal-full.png'
-import blogPreview from '../assets/img/blog-preview.png'
-import blogFull from '../assets/img/blog-full.png'
 import tindogPreview from '../assets/img/tindog-preview.png'
 import tindogFull from '../assets/img/tindog-full.png'
+import blogPreview from '../assets/img/blog-preview.png'
+import blogFull from '../assets/img/blog-full.png'
 
 const workData = [
     {
@@ -105,19 +105,19 @@ const workData = [
         appLink: "https://tentacle-bean.github.io/blog-mockup/",
         repoLink: "https://github.com/tentacle-bean/blog-mockup",
     },
-    {
-        _id: "8",
-        title: "",
-        titleStrong: "",
-        subtitle: "",
-        previewImage: blogPreview,
-        fullImage: blogFull,
-        p1: "",
-        p2: "",
-        p3: "",
-        appLink: "",
-        repoLink: "",
-    },
+    // {
+    //     _id: "8",
+    //     title: "",
+    //     titleStrong: "",
+    //     subtitle: "",
+    //     previewImage: blogPreview,
+    //     fullImage: blogFull,
+    //     p1: "",
+    //     p2: "",
+    //     p3: "",
+    //     appLink: "",
+    //     repoLink: "",
+    // },
     
 ]
 

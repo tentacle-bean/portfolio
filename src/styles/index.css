@@ -19,26 +19,28 @@
             0.125em 0.125em 0.25em rgba(0,0,0,.15);
     
     --fs-h1: 2rem;
-    --fs-h2: 3rem;
-    --fs-h3: 1.5rem;
+    --fs-h2: 2rem;
+    --fs-h3: 1.25rem;
     --fs-st-h: 1.25rem;
-    --fs-body: 1rem;
+    --fs-body: 0.8rem;
 }
 
 @media (min-width: 350px) {
     :root {
         --fs-h1: 3rem;
-        --fs-h2: 3.75rem;
+        --fs-h2: 2.75rem;
         --fs-h3: 1.5rem;
         --fs-st-h: 1.6875rem;
-        --fs-body: 1.125rem;
+        --fs-body: 1rem;
     }
 }
 
 @media (min-width: 800px) {
     :root {
         --fs-h1: 4rem;
+        --fs-h2: 3.75rem;
         --fs-st-h: 2rem;
+        --fs-body: 1.125rem;
     }
 }
 
@@ -146,10 +148,10 @@ strong{
 .section-title-services:before{
     position: absolute;
     content: "";
-    width: 40%;
+    width: 80%;
     height: 1px;
     background-color: var(--clr-light);
-    left: 30%;
+    left: 10%;
     bottom: -0.5em;
 }
 
@@ -285,7 +287,7 @@ strong{
     aspect-ratio: 1 / 1;
     object-fit: cover;
     transition: 
-        transform 750ms cubic-bezier(.5, 0, .5, 1),
+        transform 250ms cubic-bezier(.5, 0, .5, 1),
         opacity 250ms linear;
 }
 
@@ -394,26 +396,36 @@ strong{
 
     
     
-    .section-services{
-        background-image: url("./img/services-bg.jpg");
-        background-color: var(--clr-dark);
-        background-blend-mode: soft-light;
-        background-size: cover;
-        background-position: center;
-    }
-    
     .section-services-container{
         max-width: 1200px;
+        grid-template-columns: repeat(3, 1fr);
         grid-template-areas: 
-            "title title title";
+            "title title title"
+            ". . .";
     }
     
     .section-title-services{
         grid-area: title;
     }
+
+    .section-services{
+        background-image: url("services-bg.jpg");
+    }
+
+    .section-work{
+        background-image: url("work-bg.jpg");
+    }
+
+    .section-services,
+    .section-work{
+        text-shadow: 0 0 4px var(--clr-darker);
+        background-color: var(--clr-dark);
+        background-size: cover;
+        background-position: center;
+    }
     
     
-    
+
     .section-aboutme-container{
         grid-template-columns: 2fr 1fr;
         grid-template-areas:
@@ -476,3 +488,6 @@ strong{
 .portfolio-item-individual .socials-a-inv{
     font-size: var(--fs-st-h);
 }
+
+
+

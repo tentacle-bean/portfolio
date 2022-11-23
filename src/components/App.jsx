@@ -8,7 +8,6 @@ import Footer from './Footer'
 function App(){
     return(
         <>
-            {/* <Header /> */}
             <main>
                 <Home />
 
@@ -16,7 +15,7 @@ function App(){
                     <section className='section-links'>
                         <div className='section-container section-links-container'>
                             <Link to='/services'>
-                                <button className="btn">Services</button>
+                                <button className="btn">Technologies</button>
                             </Link>
                             <Link to='/aboutme'>
                                 <button className="btn">About me</button>
@@ -31,11 +30,7 @@ function App(){
                         <Route path='/services' element={<Services />}/>
                         <Route path='/aboutme' element={<AboutMe />} />
                         <Route path='/work/*' element={<Work />} />
-
-                        <Route
-                            path='/'                                   // <-- "/"
-                            element={<div></div>}
-                        />
+                        <Route path='/' element={<></>} />
                     </Routes>
                 </Router>
 
