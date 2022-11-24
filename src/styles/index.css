@@ -409,11 +409,11 @@ strong{
     }
 
     .section-services{
-        background-image: url("services-bg.jpg");
+        background-image: url("https://raw.githubusercontent.com/tentacle-bean/portfolio/main/public/services-bg.jpg");
     }
 
     .section-work{
-        background-image: url("work-bg.jpg");
+        background-image: url("https://raw.githubusercontent.com/tentacle-bean/portfolio/main/public/work-bg.jpg");
     }
 
     .section-services,
