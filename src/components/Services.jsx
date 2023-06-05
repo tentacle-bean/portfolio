@@ -14,21 +14,31 @@ function Services(){
                 <h2 className="section-title section-title-services">Technologies I use</h2>
                 
                 <div className="service">
-                    <h3 className="service-name">Design + Development</h3>
-                    <p className="service-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <h3 className="service-name">HTML + CSS</h3>
+                    <ul className="service-desc">
+                        <li>Creating conceptual skeletons of web applications</li>
+                        <li>Programming fully responsive designs using CSS Flexbox and Grid</li>
+                    </ul>
                 </div>
 
                 <div className="service">
-                    <h3 className="service-name">E-Commerce</h3>
-                    <p className="service-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <h3 className="service-name">Javascript</h3>
+                    <ul className="service-desc">
+                        <li>DOM manipulation</li>
+                        <li>creating objects and classes</li>
+                        <li>using async js to communicate with APIs</li>
+                    </ul>
                 </div>
                 
                 <div className="service">
-                    <h3 className="service-name">WordPress</h3>
-                    <p className="service-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <h3 className="service-name">React + Redux</h3>
+                    <ul className="service-desc">
+                        <li>dynamically creating functional components using provided data</li>
+                        <li>understanding the concept of prop communication between various related components</li>
+                        <li>understanding the usage of most commonly used hooks</li>
+                        <li>Redux with RTK</li>
+                    </ul>
                 </div>
-                
-                {/* <a className="btn-work" href="#work">see my work</a> */}
             </div>
         </section>
     )
